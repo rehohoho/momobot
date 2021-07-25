@@ -1,3 +1,5 @@
+.. _software_doc_main:
+
 Software
 ========
 
