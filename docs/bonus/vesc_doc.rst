@@ -217,7 +217,7 @@ Next the app settings has to be configured accordingly. For MOMO control, we wil
 .. image:: ../assets/Capture.png
   :width: 100%
 
-1. Finally, set the Duty Settings as follows:
+5. Finally, set the Duty Settings as follows:
 
 .. image:: ../assets/Capture2.png
   :width: 100%
