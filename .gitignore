@@ -9,3 +9,4 @@ build/
 devel/
 .catkin_tools/
 logs/
+docs/_build/
