@@ -1,0 +1,16 @@
+source /opt/ros/melodic/setup.bash
+source /usr/src/momobot/3rd_party/catkin_ws/devel/setup.bash
+source /usr/src/momobot/3rd_party/linorobot_ws/devel/setup.bash
+source /usr/src/momobot/momobot_ws/devel/setup.bash
+
+export LINOLIDAR=lms111
+export LINOBASE=2wd
+
+# IP_ADDRESS=$(ip addr show eth0 | grep -o 'inet [0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+' | grep -o [0-9].*)
+# export ROS_MASTER_URI=http://10.21.139.36:11311
+# export ROS_IP=$IP_ADDRESS
+# export ROS_HOSTNAME=$IP_ADDRESS
+
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/momobot/momobot_ws/src
+
+alias costmap_reset="rosservice call /move_base/clear_costmaps"
