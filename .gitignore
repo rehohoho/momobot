@@ -8,4 +8,7 @@ credentials/
 build/
 devel/
 .catkin_tools/
+.vscode/
 logs/
+docs/_build/
+3rd_party/
