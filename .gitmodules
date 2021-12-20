@@ -22,3 +22,6 @@
 [submodule "src/lino_udev"]
 	path = momobot_ws/src/lino_udev
 	url = https://github.com/linorobot/lino_udev.git
+[submodule "momobot_ws/src/waypointgen"]
+	path = momobot_ws/src/waypointgen
+	url = https://github.com/1487quantum/waypointgen
