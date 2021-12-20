@@ -5,11 +5,11 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Circuit Diagram Draw.io Links" href="cd_links.html" /><link rel="prev" title="Software" href="../com/software.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.3.2, furo 2021.11.23"/>
         <title>Flipsky VESC 4.12 Documentation - momobot 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
     
     
 
@@ -339,85 +339,19 @@ calibrated properly</p></li>
 <li><p>Configure the general app settings as follows:</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/1555308468557.png"><img alt="../_images/1555308468557.png" src="../_images/1555308468557.png" style="width: 100%;"/></a>
-<ol class="arabic" start="3">
-<li><p>Setup ROS/Teensy to send PPM signal before going into PPM calibration.</p>
-<ul>
-<li><dl class="simple">
-<dt>ROS (recommended)</dt><dd><ol class="arabic simple">
-<li><p>Ensure ROS stack for momobot is setup. See <a class="reference internal" href="../com/software.html#software-doc-main"><span class="std std-ref">Software</span></a>.</p></li>
-<li><p>Run minimal launch, <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">momobot</span> <span class="pre">bringup.launch</span></code>.</p></li>
-<li><p>Run teleop, <code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">teleop_twist_keyboard</span> <span class="pre">teleop_twist_keyboard.py</span></code>.</p></li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl>
-<dt>Teensy, referenced from <a class="reference external" href="https://flipsky.net/blogs/vesc-tool/how-to-control-fsescbase-on-vesc-with-arduino">link</a></dt><dd><ol class="arabic">
-<li><p>Use the following code in either Arduino or platformio to send a neutral signal.</p>
-<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="lineno"> 1 </span><span class="cp">#include</span> <span class="cpf">&lt;Servo.h&gt;</span><span class="cp"></span>
-<span class="lineno"> 2 </span><span class="k">const</span> <span class="kt">uint8_t</span> <span class="n">VescOutputPin</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
-<span class="lineno"> 3 </span><span class="n">Servo</span> <span class="n">esc</span><span class="p">;</span>
-<span class="lineno"> 4 </span><span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno"> 5 </span>  <span class="n">esc</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">VescOutputPin</span><span class="p">);</span>
-<span class="lineno"> 6 </span>  <span class="n">esc</span><span class="p">.</span><span class="n">writeMicroseconds</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span>
-<span class="lineno"> 7 </span><span class="p">}</span>
-<span class="lineno"> 8 </span><span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
-<span class="lineno"> 9 </span>  <span class="n">esc</span><span class="p">.</span><span class="n">writeMicroseconds</span><span class="p">(</span><span class="mi">1500</span><span class="p">);</span>
-<span class="lineno">10 </span><span class="p">}</span>
-</pre></div>
-</div>
-</li>
-<li><p>Upload the code to the Teensy.</p>
-<ul class="simple">
-<li><p>Arduino: press upload button, press Teensy button to enter program mode</p></li>
-<li><p>Platformio: run <code class="docutils literal notranslate"><span class="pre">pio</span> <span class="pre">run</span> <span class="pre">--target</span> <span class="pre">upload</span></code> in directory containing <cite>platformio.ini</cite> file.</p></li>
-</ul>
-</li>
-</ol>
-</dd>
-</dl>
-</li>
-</ul>
-</li>
-<li><p>Move on to calibrate the PPM settings. Get minimum, maximum and centre PPM signal values using either of the methods below.</p>
-<ol class="arabic simple">
-<li><p>Check that the PPM received <cite>From VESC</cite> is neutral (~1.5ms)</p></li>
-<li><p>Select ‘Current No Reverse With Brake’</p></li>
-<li><p>Set input deadband of 10%</p></li>
-<li><p>Apply maximum and minimum throttle to calibrate using either ROS/Teensy</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>ROS (recommended)</dt><dd><ol class="arabic simple">
-<li><p>Apply maximum forward throttle by holding ‘i’ button</p></li>
-<li><p>Check received PPM ‘From VESC’ climbs to a maximum value (~2ms)</p></li>
-<li><p>Apply maximum backward throttle by holding ‘,’ button</p></li>
-<li><p>Check received PPM ‘From VESC’ falls to a minimum value (~1ms)</p></li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Teensy</dt><dd><ol class="arabic simple">
-<li><p>Modify line 9 above to send 1.000ms, <code class="docutils literal notranslate"><span class="pre">esc.writeMicroseconds(2000);</span></code></p></li>
-<li><p>Check received PPM ‘From VESC’ climbs to a maximum value (~2ms)</p></li>
-<li><p>Modify line 9 above to send 2.000ms, <code class="docutils literal notranslate"><span class="pre">esc.writeMicroseconds(1000);</span></code></p></li>
-<li><p>Check received PPM ‘From VESC’ falls to a minimum value (~1ms)</p></li>
-</ol>
-</dd>
-</dl>
-</li>
-</ul>
-</li>
-<li><p>Click apply.</p></li>
-</ol>
-</li>
+<ol class="arabic simple" start="3">
+<li><p>Configure the PPM settings as follows:</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/Capture.png"><img alt="../_images/Capture.png" src="../_images/Capture.png" style="width: 100%;"/></a>
-<ol class="arabic simple" start="5">
+<p>(Alternatively, using ROS / Teensy, send a neutral signal and monitor
+what PPM is being detected and use that as the center instead. Then
+apply the maximum forward and reverse and use those as the start and
+end values accordingly.)</p>
+<ol class="arabic simple" start="4">
 <li><p>Finally, set the Duty Settings as follows:</p></li>
 </ol>
 <a class="reference internal image-reference" href="../_images/Capture2.png"><img alt="../_images/Capture2.png" src="../_images/Capture2.png" style="width: 100%;"/></a>
-<ol class="arabic simple" start="6">
+<ol class="arabic simple" start="5">
 <li><p>Remember to write the configuration to the VESC.</p></li>
 </ol>
 <p>That’s it! The VESC should be configured for FOC.</p>
@@ -454,11 +388,9 @@ calibrated properly</p></li>
 
         <div class="related-information">
               Copyright &#169; 2021 SUTD Organisation of Autonomous Robotics |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/bonus/vesc_doc.rst.txt"
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="../_sources/bonus/vesc_doc.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -507,6 +439,6 @@ calibrated properly</p></li>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     </body>
 </html>

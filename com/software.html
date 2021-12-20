@@ -5,11 +5,11 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Flipsky VESC 4.12 Documentation" href="../bonus/vesc_doc.html" /><link rel="prev" title="Electronics" href="electronics.html" />
 
-    <meta name="generator" content="sphinx-4.2.0, furo 2021.10.09"/>
+    <meta name="generator" content="sphinx-4.3.2, furo 2021.11.23"/>
         <title>Software - momobot 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=0254c309f5cadf746f1a613e7677379ac9c8cdcd" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=7f0192ddeb2adecfbaa87ffbcf67d16358b30bc1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=0af69da206d614734f649b27d4cdc2dd6c31f41d" />
     
     
 
@@ -199,7 +199,7 @@
         </div>
         <article role="main">
           <section id="software">
-<span id="software-doc-main"></span><h1>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h1>
+<h1>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h1>
 <p>MOMObot is using a modified <a class="reference external" href="https://linorobot.org">Linorobot</a> stack!</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
@@ -406,7 +406,7 @@ manager/tools for the Teensy.</p></li>
    <span class="c1"># SUTD_LAB</span>
    <span class="n">Port</span> <span class="mi">22</span>
    <span class="n">User</span> <span class="o">&lt;</span><span class="n">USERNAME</span><span class="o">&gt;</span>
-   <span class="n">HostName</span> <span class="mf">10.21</span><span class="o">.</span><span class="mf">132.80</span>
+   <span class="n">HostName</span> <span class="mf">10.21.132.80</span>
 </pre></div>
 </div>
 </div>
@@ -865,7 +865,7 @@ named locations. You can use this alongside <code class="docutils literal notran
 <section id="libusb-0-1-so-4-not-found-platformio-issue">
 <h3>libusb-0.1.so.4 not found (platformio issue)<a class="headerlink" href="#libusb-0-1-so-4-not-found-platformio-issue" title="Permalink to this headline">¶</a></h3>
 <p>If you encounter the following issue:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teensy_loader_cli</span><span class="p">:</span> <span class="n">error</span> <span class="k">while</span> <span class="n">loading</span> <span class="n">shared</span> <span class="n">libraries</span><span class="p">:</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">0.1</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">4</span><span class="p">:</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">shared</span> <span class="nb">object</span> <span class="n">file</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teensy_loader_cli</span><span class="p">:</span> <span class="n">error</span> <span class="k">while</span> <span class="n">loading</span> <span class="n">shared</span> <span class="n">libraries</span><span class="p">:</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">0.1</span><span class="o">.</span><span class="n">so</span><span class="mf">.4</span><span class="p">:</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">shared</span> <span class="nb">object</span> <span class="n">file</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
 <span class="o">***</span> <span class="p">[</span><span class="n">upload</span><span class="p">]</span> <span class="n">Error</span> <span class="mi">127</span>
 </pre></div>
 </div>
@@ -881,15 +881,15 @@ named locations. You can use this alongside <code class="docutils literal notran
   <span class="n">File</span> <span class="s2">"/usr/lib/python3/dist-packages/kivy/core/__init__.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">63</span><span class="p">,</span> <span class="ow">in</span> <span class="n">core_select_lib</span>
     <span class="n">fromlist</span><span class="o">=</span><span class="p">[</span><span class="n">modulename</span><span class="p">],</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
   <span class="n">File</span> <span class="s2">"/usr/lib/python3/dist-packages/kivy/core/window/window_egl_rpi.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">12</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-    <span class="kn">from</span> <span class="nn">kivy.lib.vidcore_lite</span> <span class="k">import</span> <span class="n">bcm</span><span class="p">,</span> <span class="n">egl</span>
+    <span class="kn">from</span> <span class="nn">kivy.lib.vidcore_lite</span> <span class="kn">import</span> <span class="n">bcm</span><span class="p">,</span> <span class="n">egl</span>
 
-<span class="n">sdl2</span> <span class="o">-</span> <span class="ne">ImportError</span><span class="p">:</span> <span class="n">libSDL2_image</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="n">so</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">shared</span> <span class="nb">object</span> <span class="n">file</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+<span class="n">sdl2</span> <span class="o">-</span> <span class="ne">ImportError</span><span class="p">:</span> <span class="n">libSDL2_image</span><span class="o">-</span><span class="mf">2.0</span><span class="o">.</span><span class="n">so</span><span class="mf">.0</span><span class="p">:</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">shared</span> <span class="nb">object</span> <span class="n">file</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
   <span class="n">File</span> <span class="s2">"/usr/lib/python3/dist-packages/kivy/core/__init__.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">63</span><span class="p">,</span> <span class="ow">in</span> <span class="n">core_select_lib</span>
     <span class="n">fromlist</span><span class="o">=</span><span class="p">[</span><span class="n">modulename</span><span class="p">],</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
   <span class="n">File</span> <span class="s2">"/usr/lib/python3/dist-packages/kivy/core/window/window_sdl2.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">27</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-    <span class="kn">from</span> <span class="nn">kivy.core.window._window_sdl2</span> <span class="k">import</span> <span class="n">_WindowSDL2Storage</span>
+    <span class="kn">from</span> <span class="nn">kivy.core.window._window_sdl2</span> <span class="kn">import</span> <span class="n">_WindowSDL2Storage</span>
 
-<span class="n">x11</span> <span class="o">-</span> <span class="n">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">'kivy.core.window.window_x11'</span>
+<span class="n">x11</span> <span class="o">-</span> <span class="ne">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">'kivy.core.window.window_x11'</span>
   <span class="n">File</span> <span class="s2">"/usr/lib/python3/dist-packages/kivy/core/__init__.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">63</span><span class="p">,</span> <span class="ow">in</span> <span class="n">core_select_lib</span>
     <span class="n">fromlist</span><span class="o">=</span><span class="p">[</span><span class="n">modulename</span><span class="p">],</span> <span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 
@@ -950,11 +950,9 @@ named locations. You can use this alongside <code class="docutils literal notran
 
         <div class="related-information">
               Copyright &#169; 2021 SUTD Organisation of Autonomous Robotics |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>. |
-            <a class="muted-link" href="../_sources/com/software.rst.txt"
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="../_sources/com/software.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -1049,6 +1047,6 @@ named locations. You can use this alongside <code class="docutils literal notran
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     </body>
 </html>

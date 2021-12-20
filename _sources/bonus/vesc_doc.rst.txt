@@ -164,65 +164,22 @@ Next the app settings has to be configured accordingly. For MOMO control, we wil
 .. image:: ../assets/1555308468557.png
   :width: 100%
 
-3. Setup ROS/Teensy to send PPM signal before going into PPM calibration.
-
-   * ROS (recommended)
-      1. Ensure ROS stack for momobot is setup. See :ref:`software_doc_main`.
-      2. Run minimal launch, ``roslaunch momobot bringup.launch``.
-      3. Run teleop, ``rosrun teleop_twist_keyboard teleop_twist_keyboard.py``.
-
-   * Teensy, referenced from `link <https://flipsky.net/blogs/vesc-tool/how-to-control-fsescbase-on-vesc-with-arduino>`__
-      1. Use the following code in either Arduino or platformio to send a neutral signal.
-
-         .. code-block:: c
-            :linenos:
-
-            #include <Servo.h>
-            const uint8_t VescOutputPin = 5;
-            Servo esc;
-            void setup() {
-              esc.attach(VescOutputPin);
-              esc.writeMicroseconds(1500);
-            }
-            void loop() {
-              esc.writeMicroseconds(1500);
-            }
-    
-      2. Upload the code to the Teensy.
-
-         * Arduino: press upload button, press Teensy button to enter program mode
-         * Platformio: run ``pio run --target upload`` in directory containing `platformio.ini` file.
-
-4. Move on to calibrate the PPM settings. Get minimum, maximum and centre PPM signal values using either of the methods below.
-
-   #. Check that the PPM received `From VESC` is neutral (~1.5ms)
-   #. Select 'Current No Reverse With Brake'
-   #. Set input deadband of 10%
-   #. Apply maximum and minimum throttle to calibrate using either ROS/Teensy
-
-      * ROS (recommended)
-         #. Apply maximum forward throttle by holding 'i' button
-         #. Check received PPM 'From VESC' climbs to a maximum value (~2ms)
-         #. Apply maximum backward throttle by holding ',' button
-         #. Check received PPM 'From VESC' falls to a minimum value (~1ms)
-
-      * Teensy
-         #. Modify line 9 above to send 1.000ms, ``esc.writeMicroseconds(2000);``
-         #. Check received PPM 'From VESC' climbs to a maximum value (~2ms)
-         #. Modify line 9 above to send 2.000ms, ``esc.writeMicroseconds(1000);``
-         #. Check received PPM 'From VESC' falls to a minimum value (~1ms)
-
-   #. Click apply.
+3. Configure the PPM settings as follows:
 
 .. image:: ../assets/Capture.png
   :width: 100%
 
-5. Finally, set the Duty Settings as follows:
+(Alternatively, using ROS / Teensy, send a neutral signal and monitor
+what PPM is being detected and use that as the center instead. Then
+apply the maximum forward and reverse and use those as the start and
+end values accordingly.)
+
+4. Finally, set the Duty Settings as follows:
 
 .. image:: ../assets/Capture2.png
   :width: 100%
 
-6. Remember to write the configuration to the VESC.
+5. Remember to write the configuration to the VESC.
 
 
 That's it! The VESC should be configured for FOC.
