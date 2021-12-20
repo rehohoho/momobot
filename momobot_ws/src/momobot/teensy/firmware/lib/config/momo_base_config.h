@@ -20,7 +20,7 @@
 #define K_P 0.4 //0.2 // P constant
 #define K_I 0.15 // I constant
 #define K_D 0.0 // D constant
-
+    
 //define your robot' specs here
 #define MAX_RPM 800             // motor's maximum RPM
 #define COUNTS_PER_REV 60       // wheel encoder's no of ticks per rev
@@ -56,8 +56,8 @@ ROBOT ORIENTATION
 #define MOTOR1_ENCODER_A 14//15
 #define MOTOR1_ENCODER_B 15//14
 
-#define MOTOR2_ENCODER_A 12//11
-#define MOTOR2_ENCODER_B 11//12
+#define MOTOR2_ENCODER_A 11//11
+#define MOTOR2_ENCODER_B 12//12
 
 #define MOTOR3_ENCODER_A 17
 #define MOTOR3_ENCODER_B 16
@@ -116,11 +116,11 @@ ROBOT ORIENTATION
   #define MOTOR_DRIVER ESC
 
   #define MOTOR1_PWM 1 //DON'T TOUCH THIS! This is just a placeholder
-  #define MOTOR1_IN_A 5//21
+  #define MOTOR1_IN_A 21//21
   #define MOTOR1_IN_B 20
 
   #define MOTOR2_PWM 8 //DON'T TOUCH THIS! This is just a placeholder
-  #define MOTOR2_IN_A 21//5
+  #define MOTOR2_IN_A 5 //5
   #define MOTOR2_IN_B 6
 
   #define MOTOR3_PWM 0 //DON'T TOUCH THIS! This is just a placeholder

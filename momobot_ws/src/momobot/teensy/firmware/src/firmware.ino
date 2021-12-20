@@ -202,9 +202,9 @@ void moveBase()
 
     char buffer[50];
 
-    sprintf (buffer, "L SPEED: %ld", motor_1_spin);
+    sprintf (buffer, "L SPEED: sent %ld, target %ld, feedback %ld", motor_1_spin, req_rpm.motor1, current_rpm1);
     nh.loginfo(buffer);
-    sprintf (buffer, "R SPEED: %ld", motor_2_spin);
+    sprintf (buffer, "R SPEED: sent %ld, target %ld, feedback %ld", motor_2_spin, req_rpm.motor2, current_rpm2);
     nh.loginfo(buffer);
 
     motor1_controller.spin(motor_1_spin);
