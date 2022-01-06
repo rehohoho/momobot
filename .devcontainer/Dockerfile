@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
     python3-catkin-tools
     # rm -rf /var/lib/apt/lists/* && \
 
+RUN echo "source /opt/ros/${ROS_DISTRO}/setup.bash" >> ~/.bashrc
+
 # Only define which port the image should listen to, not actually port forwarding
 EXPOSE 9090
 
