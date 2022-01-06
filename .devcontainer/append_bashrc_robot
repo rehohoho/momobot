@@ -1,0 +1,14 @@
+export ROS_PYTHON_VERSION=3
+source /opt/ros/${ROS_DISTRO}/setup.bash
+source ~/catkin_ws/devel/setup.bash
+source ~/momobot/momobot_ws/devel/setup.bash
+
+export LINOLIDAR=lms111
+export LINOBASE=2wd
+
+export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:~/momobot/momobot_ws/src
+
+alias costmap_reset="rosservice call /move_base/clear_costmaps"
+
+export ROS_IP=10.21.139.36
+export ROS_HOSTNAME=10.21.139.36
