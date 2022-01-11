@@ -58,13 +58,13 @@ last_y_command_time = 0
 last_emotion_command_time = 0
 
 # Load basic sprites
-momo_imgs = [pygame.transform.scale(pygame.image.load('momo_1.png'), (display_width // 2, display_height // 2)),
-             pygame.transform.scale(pygame.image.load('momo_2.png'), (display_width // 2, display_height // 2)),
-             pygame.transform.scale(pygame.image.load('momo_3.png'), (display_width // 2, display_height // 2))]
+momo_imgs = [pygame.transform.scale(pygame.image.load('momo_1_white.png'), (display_width // 2, display_height // 2)),
+             pygame.transform.scale(pygame.image.load('momo_2_white.png'), (display_width // 2, display_height // 2)),
+             pygame.transform.scale(pygame.image.load('momo_3_white.png'), (display_width // 2, display_height // 2))]
 
 
-momo_emotions = {'neutral': pygame.transform.scale(pygame.image.load('momo_neutral.png'), (display_width // 2, display_height // 2)),
-                 'test': pygame.transform.scale(pygame.image.load('momo_XD.png'), (display_width // 2, display_height // 2))}
+momo_emotions = {'neutral': pygame.transform.scale(pygame.image.load('momo_neutral_white.png'), (display_width // 2, display_height // 2)),
+                 'test': pygame.transform.scale(pygame.image.load('momo_XD_white.png'), (display_width // 2, display_height // 2))}
 
 emotion_state = 'neutral'
 
