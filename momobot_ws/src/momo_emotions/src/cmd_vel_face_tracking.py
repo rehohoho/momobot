@@ -89,20 +89,24 @@ y = img_size_y / 2
 ################################################################################
 # Functions
 ################################################################################
+momo_blink = False
 
 def blink_cycler():
-    global emoton_state
-    global momo_img
+    global momo_blink
+    while True:
+        time.sleep(5)
+        time.sleep(random.uniform(0, 2))
+        momo_blink = True
+
+def blinker():
+    global momo_imgs
     global momo_img_bak
     global cycle_flag
+    global momo_blink
 
     # MOMO blink animation
     while True:
         if momo_blink:
-            momo_img_bak = momo_emotions[emotion_state]
-            time.sleep(5)
-            time.sleep(random.uniform(0, 2))
-
             momo_img_bak = momo_imgs[0]
             cycle_flag = False
             while not cycle_flag:
@@ -121,28 +125,8 @@ def blink_cycler():
                 pass
             time.sleep(10/30)
 
-            if random.randint(0, 1) == 1:
-                momo_img_bak = momo_emotions[emotion_state]
-                time.sleep(1)
-                time.sleep(random.uniform(0, 3))
-
-                momo_img_bak = momo_imgs[0]
-                cycle_flag = False
-                while not cycle_flag:
-                    pass
-                time.sleep(10/30)
-
-                momo_img_bak = momo_imgs[1]
-                cycle_flag = False
-                while not cycle_flag:
-                    pass
-                time.sleep(10/30)
-
-                momo_img_bak = momo_imgs[2]
-                cycle_flag = False
-                while not cycle_flag:
-                    pass
-                time.sleep(10/30)
+            momo_img_bak = momo_emotions[emotion_state]
+            momo_blink = False
         else:
             pass
 
@@ -152,8 +136,8 @@ def momo_img_translate(x,y):
 # Init eye position
 momo_img_translate(x, y)
 
-momo_blink = True
 Thread(target=blink_cycler, args=()).start()
+Thread(target=blinker, args=()).start()
 
 ################################################################################
 # ROS Functions
@@ -228,6 +212,9 @@ while not crashed:
 
         last_emotion_command_time = pygame.time.get_ticks()
 
+    elif keys[pygame.K_b]:
+        momo_blink = True
+    
     elif keys[pygame.K_ESCAPE] or keys[pygame.K_q]:
         if gameDisplay.get_flags() & pygame.NOFRAME:
             pygame.display.set_mode(display_size)
@@ -245,7 +232,7 @@ while not crashed:
         if emotion_state != "neutral":
             emotion_state = "neutral"
             momo_img_bak = momo_emotions[emotion_state]
-
+    print(momo_blink)
     # Limit the requests
     if x_req < 0:
         x_req = 0.05 * img_size_x
@@ -297,7 +284,7 @@ while not crashed:
         shf_y = y
 
     # Fill the screen with white
-    gameDisplay.fill(white)
+    gameDisplay.fill(black)
 
     # Execute the eye translation
     momo_img_translate(shf_x, shf_y)
