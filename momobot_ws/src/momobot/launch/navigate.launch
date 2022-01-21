@@ -1,6 +1,6 @@
 <launch>
     <!-- Map server -->
-    <arg name="map_file" default="$(find momobot)/maps/SUTD_LEVEL_1_OPEN_HOUSE.yaml"/>
+    <arg name="map_file" default="$(find momobot)/maps/campus_center_christmas_edited.yaml"/>
     <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
 
     <!-- AMCL used for localization -->
