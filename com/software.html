@@ -5,11 +5,11 @@
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Flipsky VESC 4.12 Documentation" href="../bonus/vesc_doc.html" /><link rel="prev" title="Electronics" href="electronics.html" />
 
-    <meta name="generator" content="sphinx-4.3.2, furo 2022.01.02"/>
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
         <title>Software - momobot 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=df49af52631e7917044a9c21a57f7b83170a6dd0" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=fade93df149f7c5fedb3ff897f799dc7d283b420" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
     
     
 
@@ -41,17 +41,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
     </svg>
   </symbol>
   <symbol id="svg-menu" viewBox="0 0 24 24">
     <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -60,14 +56,14 @@
   </symbol>
   <symbol id="svg-arrow-right" viewBox="0 0 24 24">
     <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
   </symbol>
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -82,7 +78,7 @@
   </symbol>
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
@@ -90,7 +86,7 @@
   </symbol>
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
@@ -176,6 +172,7 @@
 
 </div>
 </div>
+
       </div>
       
     </div>
@@ -183,8 +180,7 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -199,10 +195,10 @@
         </div>
         <article role="main">
           <section id="software">
-<h1>Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h1>
+<h1>Software<a class="headerlink" href="#software" title="Permalink to this headline">#</a></h1>
 <p>MOMObot is using a modified <a class="reference external" href="https://linorobot.org">Linorobot</a> stack!</p>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>ROS Melodic Morenia</p></li>
 <li><p>Jetpack 4.4.1, L4T 32.4.4 [Ubuntu 18.04.5 LTS]</p></li>
@@ -215,7 +211,7 @@
 </ol>
 </section>
 <section id="pre-requisites">
-<h2>3.1 Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
+<h2>3.1 Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>ROS Proficiency</p></li>
 <li><p>Intermediate Linux/Ubuntu Command Line Proficiency</p></li>
@@ -229,21 +225,21 @@
 </li>
 </ul>
 <section id="platformio">
-<h3>platformio<a class="headerlink" href="#platformio" title="Permalink to this headline">¶</a></h3>
+<h3>platformio<a class="headerlink" href="#platformio" title="Permalink to this headline">#</a></h3>
 <p>Would be used to flash the teensy firmware, install via <cite>pip3 install</cite>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip3 install platformio
 </pre></div>
 </div>
 </section>
 <section id="pygame">
-<h3>pygame<a class="headerlink" href="#pygame" title="Permalink to this headline">¶</a></h3>
+<h3>pygame<a class="headerlink" href="#pygame" title="Permalink to this headline">#</a></h3>
 <p>Ensure that pygame is installed before running <em>momo_emotions</em>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install python-pygame
 </pre></div>
 </div>
 </section>
 <section id="ros-packages">
-<h3>ROS Packages<a class="headerlink" href="#ros-packages" title="Permalink to this headline">¶</a></h3>
+<h3>ROS Packages<a class="headerlink" href="#ros-packages" title="Permalink to this headline">#</a></h3>
 <p>Ensure that the relevant ROS pacakages are installed:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/cra-ros-pkg/robot_localization">Robot Localization</a></p></li>
@@ -265,9 +261,9 @@
 </div>
 </section>
 <section id="teensy">
-<h3>Teensy<a class="headerlink" href="#teensy" title="Permalink to this headline">¶</a></h3>
+<h3>Teensy<a class="headerlink" href="#teensy" title="Permalink to this headline">#</a></h3>
 <section id="setup">
-<h4>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h4>
+<h4>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">#</a></h4>
 <p>The teensy driver could be downloaded from their
 <a class="reference external" href="https://www.pjrc.com/teensy/td_download.html">website</a>.</p>
 <p>1. Download the udev rules for the teensy and copied it to the
@@ -291,7 +287,7 @@ $ ./TeensyduinoInstall.linux64
 </div>
 </section>
 <section id="configuration">
-<h4>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h4>
+<h4>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">#</a></h4>
 <p>To access the Teensy, change the access permission of the Teensy via <cite>chmod</cite>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo chmod <span class="m">777</span> /dev/ttyACM0
 </pre></div>
@@ -366,7 +362,7 @@ file may differ for different devices/computer.</p>
 </section>
 </section>
 <section id="flashing-the-firmware">
-<h3>Flashing the firmware<a class="headerlink" href="#flashing-the-firmware" title="Permalink to this headline">¶</a></h3>
+<h3>Flashing the firmware<a class="headerlink" href="#flashing-the-firmware" title="Permalink to this headline">#</a></h3>
 <p>(Or uploading the code)</p>
 <p>To flash the teensy firmware, <cite>platformio</cite> would be used. To do so, simply run
 <code class="docutils literal notranslate"><span class="pre">platformio</span> <span class="pre">run</span></code>.</p>
@@ -385,9 +381,9 @@ manager/tools for the Teensy.</p></li>
 </section>
 </section>
 <section id="setting-up-momobot">
-<h2>3.2 Setting Up MOMObot<a class="headerlink" href="#setting-up-momobot" title="Permalink to this headline">¶</a></h2>
+<h2>3.2 Setting Up MOMObot<a class="headerlink" href="#setting-up-momobot" title="Permalink to this headline">#</a></h2>
 <section id="logging-into-momobot">
-<h3>Logging into MOMObot<a class="headerlink" href="#logging-into-momobot" title="Permalink to this headline">¶</a></h3>
+<h3>Logging into MOMObot<a class="headerlink" href="#logging-into-momobot" title="Permalink to this headline">#</a></h3>
 <p>These settings are for our internal use only. You might have to change it around to whatever WiFi network credentials and addresses your own implementation of the MOMObot stack will use.</p>
 <ol class="arabic">
 <li><p>Login to MOMObot, we use the <cite>SUTD_LAB</cite> WiFi network, with these credentials</p>
@@ -422,7 +418,7 @@ manager/tools for the Teensy.</p></li>
 </ol>
 </section>
 <section id="setting-static-ip-for-new-robots">
-<h3>Setting Static IP for New Robots<a class="headerlink" href="#setting-static-ip-for-new-robots" title="Permalink to this headline">¶</a></h3>
+<h3>Setting Static IP for New Robots<a class="headerlink" href="#setting-static-ip-for-new-robots" title="Permalink to this headline">#</a></h3>
 <p>A static IP is needed so as to be able to ssh into the robot</p>
 <ol class="arabic">
 <li><p>Setup static IP</p>
@@ -446,7 +442,7 @@ Set IPV4, set manual, set static address, Netmask and Gateway, according to <cit
 <p>To work with SUTD wifi for internet, use DNS Server: <cite>192.168.2.100</cite></p>
 </section>
 <section id="install-ros-and-other-packages-if-needed">
-<h3>Install ROS and Other Packages if needed<a class="headerlink" href="#install-ros-and-other-packages-if-needed" title="Permalink to this headline">¶</a></h3>
+<h3>Install ROS and Other Packages if needed<a class="headerlink" href="#install-ros-and-other-packages-if-needed" title="Permalink to this headline">#</a></h3>
 <ol class="arabic simple">
 <li><dl class="simple">
 <dt>Run the install scripts from setup_scripts</dt><dd><ul class="simple">
@@ -473,10 +469,10 @@ Set IPV4, set manual, set static address, Netmask and Gateway, according to <cit
 </ol>
 </section>
 <section id="setup-the-bashrc-on-momobot-as-well-as-your-computer">
-<h3>Setup the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> on MOMOBot as well as your Computer<a class="headerlink" href="#setup-the-bashrc-on-momobot-as-well-as-your-computer" title="Permalink to this headline">¶</a></h3>
+<h3>Setup the <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> on MOMOBot as well as your Computer<a class="headerlink" href="#setup-the-bashrc-on-momobot-as-well-as-your-computer" title="Permalink to this headline">#</a></h3>
 <p>(Otherwise you won’t be able to get any ROS data!!!)</p>
 <section id="on-momobot">
-<h4>On MOMObot<a class="headerlink" href="#on-momobot" title="Permalink to this headline">¶</a></h4>
+<h4>On MOMObot<a class="headerlink" href="#on-momobot" title="Permalink to this headline">#</a></h4>
 <ol class="arabic simple">
 <li><p>Open up the your prefered shell config in a text editor</p></li>
 </ol>
@@ -537,7 +533,7 @@ Set IPV4, set manual, set static address, Netmask and Gateway, according to <cit
 </div>
 </section>
 <section id="on-computer">
-<h4>On Computer<a class="headerlink" href="#on-computer" title="Permalink to this headline">¶</a></h4>
+<h4>On Computer<a class="headerlink" href="#on-computer" title="Permalink to this headline">#</a></h4>
 <ol class="arabic">
 <li><p><code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">nano</span> <span class="pre">~/.bashrc</span></code></p></li>
 <li><p>Append this</p>
@@ -559,11 +555,11 @@ Set IPV4, set manual, set static address, Netmask and Gateway, according to <cit
 </section>
 </section>
 <section id="running-momobot-capabilities">
-<h2>3.3 Running MOMObot Capabilities<a class="headerlink" href="#running-momobot-capabilities" title="Permalink to this headline">¶</a></h2>
+<h2>3.3 Running MOMObot Capabilities<a class="headerlink" href="#running-momobot-capabilities" title="Permalink to this headline">#</a></h2>
 <p>This section assumes knowledge of ROS and basic Linorobot packages.
 This is because MOMObot is based heavily on the Linorobot stack.</p>
 <section id="startup-and-bringup-process">
-<h3>Startup and Bringup Process<a class="headerlink" href="#startup-and-bringup-process" title="Permalink to this headline">¶</a></h3>
+<h3>Startup and Bringup Process<a class="headerlink" href="#startup-and-bringup-process" title="Permalink to this headline">#</a></h3>
 <ol class="arabic">
 <li><dl class="simple">
 <dt>Ensure that all electronics are connected and turned on</dt><dd><ul class="simple">
@@ -607,7 +603,7 @@ This is because MOMObot is based heavily on the Linorobot stack.</p>
 </ol>
 </section>
 <section id="checking-momo-functionality">
-<h3>Checking MOMO Functionality<a class="headerlink" href="#checking-momo-functionality" title="Permalink to this headline">¶</a></h3>
+<h3>Checking MOMO Functionality<a class="headerlink" href="#checking-momo-functionality" title="Permalink to this headline">#</a></h3>
 <p>This of course requires that you have MOMObot brought up already.</p>
 <ol class="arabic">
 <li><p><strong>COMPUTER</strong> - Open rviz:</p>
@@ -623,7 +619,7 @@ This is because MOMObot is based heavily on the Linorobot stack.</p>
 </ol>
 </section>
 <section id="ros-graph-debugging-refresher">
-<h3>ROS Graph Debugging Refresher<a class="headerlink" href="#ros-graph-debugging-refresher" title="Permalink to this headline">¶</a></h3>
+<h3>ROS Graph Debugging Refresher<a class="headerlink" href="#ros-graph-debugging-refresher" title="Permalink to this headline">#</a></h3>
 <dl>
 <dt>If visualization of all ROS nodes is required for debugging purposes, run</dt><dd><blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">rqt_graph</span> <span class="pre">rqt_graph</span></code>
@@ -662,7 +658,7 @@ This is because MOMObot is based heavily on the Linorobot stack.</p>
 </ol>
 </section>
 <section id="running-the-navigation-stack">
-<h3>Running the Navigation stack<a class="headerlink" href="#running-the-navigation-stack" title="Permalink to this headline">¶</a></h3>
+<h3>Running the Navigation stack<a class="headerlink" href="#running-the-navigation-stack" title="Permalink to this headline">#</a></h3>
 <p>Just like the Linorobot!</p>
 <ul>
 <li><p>Run this command: <code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">momobot</span> <span class="pre">navigate.launch</span></code></p>
@@ -699,9 +695,9 @@ $ rviz -d navigate.rviz
 </section>
 </section>
 <section id="tuning-momobot">
-<h2>3.4 Tuning MOMObot<a class="headerlink" href="#tuning-momobot" title="Permalink to this headline">¶</a></h2>
+<h2>3.4 Tuning MOMObot<a class="headerlink" href="#tuning-momobot" title="Permalink to this headline">#</a></h2>
 <section id="changing-the-map">
-<h3>Changing The Map<a class="headerlink" href="#changing-the-map" title="Permalink to this headline">¶</a></h3>
+<h3>Changing The Map<a class="headerlink" href="#changing-the-map" title="Permalink to this headline">#</a></h3>
 <p>If you happen to have a new map that you want MOMObot to use, simply add the map and its corresponding <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> to the <code class="docutils literal notranslate"><span class="pre">momobot/maps</span></code> directory.</p>
 <p>Then, point the <code class="docutils literal notranslate"><span class="pre">map_server</span></code> node to the proper map by editing the <code class="docutils literal notranslate"><span class="pre">navigate.launch</span></code> file!</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roscd momobot/launch
@@ -714,9 +710,9 @@ nano navigate.launch
 </div>
 </section>
 <section id="ekf-tuning">
-<h3>EKF Tuning<a class="headerlink" href="#ekf-tuning" title="Permalink to this headline">¶</a></h3>
+<h3>EKF Tuning<a class="headerlink" href="#ekf-tuning" title="Permalink to this headline">#</a></h3>
 <section id="method">
-<h4>Method<a class="headerlink" href="#method" title="Permalink to this headline">¶</a></h4>
+<h4>Method<a class="headerlink" href="#method" title="Permalink to this headline">#</a></h4>
 <ol class="arabic">
 <li><p>Mark out a square of 3m x 3m using tape</p></li>
 <li><p>Using tele-operation, drive the robot in a square</p></li>
@@ -749,14 +745,14 @@ nano robot_localization.yaml
 </ol>
 </section>
 <section id="tuning-navigation-parameters">
-<h4>Tuning Navigation Parameters<a class="headerlink" href="#tuning-navigation-parameters" title="Permalink to this headline">¶</a></h4>
+<h4>Tuning Navigation Parameters<a class="headerlink" href="#tuning-navigation-parameters" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">momobot</span></code> to cd into the momobot stack</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">momobot/param/</span></code> change these files for navigation parameters</p></li>
 </ul>
 </section>
 <section id="tuning-localization-parameters">
-<h4>Tuning Localization Parameters<a class="headerlink" href="#tuning-localization-parameters" title="Permalink to this headline">¶</a></h4>
+<h4>Tuning Localization Parameters<a class="headerlink" href="#tuning-localization-parameters" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">momobot/launch/include</span></code>, then <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">amcl.launch</span></code></p></li>
 <li><p>Parameters of interest:
@@ -772,19 +768,19 @@ nano robot_localization.yaml
 </section>
 </section>
 <section id="console-commands">
-<h2>3.5 Console Commands<a class="headerlink" href="#console-commands" title="Permalink to this headline">¶</a></h2>
+<h2>3.5 Console Commands<a class="headerlink" href="#console-commands" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Each command is in each individual terminal, opened INSIDE MOMOBOT (i.e. in a terminal that is SSHed into MOMOBOT)</p>
 </div>
 <section id="set-pose">
-<h3>Set Pose<a class="headerlink" href="#set-pose" title="Permalink to this headline">¶</a></h3>
+<h3>Set Pose<a class="headerlink" href="#set-pose" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> resetting pose... <span class="o">&amp;&amp;</span> rostopic pub /initialpose geometry_msgs/PoseWithCovarianceStamped <span class="s1">'{header: {frame_id: "map"}, pose: {pose: {position: {x: 76.401, y: -15.676, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.10356, w: 0.99462}}, covariance: [0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.06853891945200942]}}'</span> --once <span class="o">&amp;&amp;</span> <span class="nb">echo</span> clearing costmaps... <span class="o">&amp;&amp;</span> rosservice call /move_base/clear_costmaps <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="k">done</span>!
 </pre></div>
 </div>
 </section>
 <section id="set-goal-pose-for-autonomous-navigation">
-<h3>Set Goal Pose for Autonomous Navigation<a class="headerlink" href="#set-goal-pose-for-autonomous-navigation" title="Permalink to this headline">¶</a></h3>
+<h3>Set Goal Pose for Autonomous Navigation<a class="headerlink" href="#set-goal-pose-for-autonomous-navigation" title="Permalink to this headline">#</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rostopic pub /move_base_simple/goal geometry_msgs/PoseStamped <span class="s1">'{header: {frame_id: "map"}, pose: {position: {x: 1.93851232529, y: -0.423947900534, z: 0.0}, orientation: {x: 0.0, y: 0.0, z: -0.125194964757, w: 0.992132158938}}}'</span> --once <span class="o">&amp;&amp;</span> rosservice call /move_base/clear_costmaps
 </pre></div>
 </div>
@@ -798,21 +794,21 @@ nano robot_localization.yaml
 </section>
 </section>
 <section id="mapping">
-<h2>3.6 Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">¶</a></h2>
+<h2>3.6 Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">roslaunch</span> <span class="pre">momobot</span> <span class="pre">slam.launch</span></code> on <strong>COMPUTER</strong></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">map_server</span> <span class="pre">map_saver</span></code> to save the map in the current directory. This saves your map files into .yaml files and .pgm files. .pgm can be editted in photoshop, etc like a .png file.</p></li>
 <li><p>If you need to change the map name, do it in the <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> file.</p></li>
 </ul>
 <section id="setting-your-maps">
-<h3>Setting your maps<a class="headerlink" href="#setting-your-maps" title="Permalink to this headline">¶</a></h3>
+<h3>Setting your maps<a class="headerlink" href="#setting-your-maps" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Under <code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">momobot</span></code>, name the map properly as the <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> files will be used to load map files here.</p></li>
 </ul>
 </section>
 </section>
 <section id="exporting-display-to-momobot-from-computer">
-<h2>3.7 Exporting Display to MOMObot from Computer<a class="headerlink" href="#exporting-display-to-momobot-from-computer" title="Permalink to this headline">¶</a></h2>
+<h2>3.7 Exporting Display to MOMObot from Computer<a class="headerlink" href="#exporting-display-to-momobot-from-computer" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">DISPLAY:0</span></code> enables you to run commands on other computer instead of your computer. Ensure that you are on the right terminal <strong>MOMOBOT</strong></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rosrun</span> <span class="pre">momo_emotions</span> <span class="pre">cmd_vel_face_tracking.py</span></code> to run face cmd_vel tracking script on <strong>MOMObot</strong> from the <strong>Computer Terminal</strong></p></li>
@@ -820,7 +816,7 @@ nano robot_localization.yaml
 </ul>
 </section>
 <section id="semantic-pose-and-semantic-pose-sounder-packages">
-<h2>3.8 Semantic Pose and Semantic Pose Sounder Packages<a class="headerlink" href="#semantic-pose-and-semantic-pose-sounder-packages" title="Permalink to this headline">¶</a></h2>
+<h2>3.8 Semantic Pose and Semantic Pose Sounder Packages<a class="headerlink" href="#semantic-pose-and-semantic-pose-sounder-packages" title="Permalink to this headline">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">semantic_pose</span></code> package allows the robot to map robot coordinates to
@@ -846,7 +842,7 @@ named locations. You can use this alongside <code class="docutils literal notran
 </ul>
 </section>
 <section id="software-to-dos">
-<h2>3.9 Software To-Dos<a class="headerlink" href="#software-to-dos" title="Permalink to this headline">¶</a></h2>
+<h2>3.9 Software To-Dos<a class="headerlink" href="#software-to-dos" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Laser scan matcher</p></li>
 <li><p>Visual odometry</p></li>
@@ -861,9 +857,9 @@ named locations. You can use this alongside <code class="docutils literal notran
 </ul>
 </section>
 <section id="troubleshooting">
-<h2>3.10 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<h2>3.10 Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">#</a></h2>
 <section id="libusb-0-1-so-4-not-found-platformio-issue">
-<h3>libusb-0.1.so.4 not found (platformio issue)<a class="headerlink" href="#libusb-0-1-so-4-not-found-platformio-issue" title="Permalink to this headline">¶</a></h3>
+<h3>libusb-0.1.so.4 not found (platformio issue)<a class="headerlink" href="#libusb-0-1-so-4-not-found-platformio-issue" title="Permalink to this headline">#</a></h3>
 <p>If you encounter the following issue:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">teensy_loader_cli</span><span class="p">:</span> <span class="n">error</span> <span class="k">while</span> <span class="n">loading</span> <span class="n">shared</span> <span class="n">libraries</span><span class="p">:</span> <span class="n">libusb</span><span class="o">-</span><span class="mf">0.1</span><span class="o">.</span><span class="n">so</span><span class="mf">.4</span><span class="p">:</span> <span class="n">cannot</span> <span class="nb">open</span> <span class="n">shared</span> <span class="nb">object</span> <span class="n">file</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
 <span class="o">***</span> <span class="p">[</span><span class="n">upload</span><span class="p">]</span> <span class="n">Error</span> <span class="mi">127</span>
@@ -875,7 +871,7 @@ named locations. You can use this alongside <code class="docutils literal notran
 </div>
 </section>
 <section id="sdl-issue">
-<h3>SDL Issue<a class="headerlink" href="#sdl-issue" title="Permalink to this headline">¶</a></h3>
+<h3>SDL Issue<a class="headerlink" href="#sdl-issue" title="Permalink to this headline">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">CRITICAL</span><span class="p">]</span> <span class="p">[</span><span class="n">Window</span>      <span class="p">]</span> <span class="n">Unable</span> <span class="n">to</span> <span class="n">find</span> <span class="nb">any</span> <span class="n">valuable</span> <span class="n">Window</span> <span class="n">provider</span><span class="o">.</span> <span class="n">Please</span> <span class="n">enable</span> <span class="n">debug</span> <span class="n">logging</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">add</span> <span class="o">-</span><span class="n">d</span> <span class="k">if</span> <span class="n">running</span> <span class="kn">from</span> <span class="nn">the</span> <span class="n">command</span> <span class="n">line</span><span class="p">,</span> <span class="ow">or</span> <span class="n">change</span> <span class="n">the</span> <span class="n">log</span> <span class="n">level</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">config</span><span class="p">)</span> <span class="ow">and</span> <span class="n">re</span><span class="o">-</span><span class="n">run</span> <span class="n">your</span> <span class="n">app</span> <span class="n">to</span> <span class="n">identify</span> <span class="n">potential</span> <span class="n">causes</span>
 <span class="n">egl_rpi</span> <span class="o">-</span> <span class="ne">ImportError</span><span class="p">:</span> <span class="n">cannot</span> <span class="kn">import</span> <span class="nn">name</span> <span class="s1">'bcm'</span>
   <span class="n">File</span> <span class="s2">"/usr/lib/python3/dist-packages/kivy/core/__init__.py"</span><span class="p">,</span> <span class="n">line</span> <span class="mi">63</span><span class="p">,</span> <span class="ow">in</span> <span class="n">core_select_lib</span>
@@ -902,7 +898,7 @@ named locations. You can use this alongside <code class="docutils literal notran
 </div>
 </section>
 <section id="d-bus-issue-jetson-tx2">
-<h3>D-Bus Issue (Jetson TX2)<a class="headerlink" href="#d-bus-issue-jetson-tx2" title="Permalink to this headline">¶</a></h3>
+<h3>D-Bus Issue (Jetson TX2)<a class="headerlink" href="#d-bus-issue-jetson-tx2" title="Permalink to this headline">#</a></h3>
 <p>If there are issues running programs that utillises the kivy lib as shown below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">INFO</span>   <span class="p">]</span> <span class="p">[</span><span class="n">Window</span>      <span class="p">]</span> <span class="n">Provider</span><span class="p">:</span> <span class="n">sdl2</span><span class="p">([</span><span class="s1">'window_egl_rpi'</span><span class="p">]</span> <span class="n">ignored</span><span class="p">)</span>
 <span class="n">dbus</span><span class="p">[</span><span class="mi">24434</span><span class="p">]:</span> <span class="n">arguments</span> <span class="n">to</span> <span class="n">dbus_message_new_method_call</span><span class="p">()</span> <span class="n">were</span> <span class="n">incorrect</span><span class="p">,</span> <span class="n">assertion</span> <span class="s2">"path != NULL"</span> <span class="n">failed</span> <span class="ow">in</span> <span class="n">file</span> <span class="o">../../../</span><span class="n">dbus</span><span class="o">/</span><span class="n">dbus</span><span class="o">-</span><span class="n">message</span><span class="o">.</span><span class="n">c</span> <span class="n">line</span> <span class="mf">1362.</span>
@@ -947,15 +943,21 @@ named locations. You can use this alongside <code class="docutils literal notran
               </div>
             </a>
         </div>
-
-        <div class="related-information">
-              Copyright &#169; 2022 SUTD Organisation of Autonomous Robotics |
-          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            | <a class="muted-link" href="../_sources/com/software.rst.txt"
-               rel="nofollow">
-              Show Source
-            </a>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022 SUTD Organisation of Autonomous Robotics
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
         </div>
         
       </footer>
