@@ -3,7 +3,8 @@
 #else
     #include <WProgram.h>
 #endif
-
+#include <Adafruit_NeoPixel.h>
+#include <math.h>
 #include <Servo.h>
 
 #include "ros.h"
@@ -22,6 +23,16 @@
 #include "Kinematics.h"
 #include "PID.h"
 #include "Imu.h"
+#define LED_PIN 8
+#define LED_COUNT 50
+#define WHEEL_DISTANCE 0.415
+#define MAX_SPEED 4.0
+#define MAX_INT 170
+#define MIN_INT 0
+#define MAX_BRIGHTNESS 160
+#define MIN_BRIGHTNESS 0
+#define BREATHING_DELAY 10
+Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
 
 #define ENCODER_OPTIMIZE_INTERRUPTS
 #include "Encoder.h"
@@ -52,9 +63,13 @@ Kinematics kinematics(Kinematics::MOMO_BASE, MAX_RPM, WHEEL_DIAMETER, FR_WHEELS_
 float g_req_linear_vel_x = 0;
 float g_req_linear_vel_y = 0;
 float g_req_angular_vel_z = 0;
-
+float right_speed_ms = 0;
+float left_speed_ms = 0;
+int red = 0, green = 0, blue = 0, c = 0;
+int brightness = 0;
+bool brightness_sign = true;
 unsigned long g_prev_command_time = 0;
-
+int32_t neo_timer = 0;
 //callback function prototypes
 void commandCallback(const geometry_msgs::Twist& cmd_msg);
 void PIDCallback(const lino_msgs::PID& pid);
@@ -72,6 +87,10 @@ ros::Publisher raw_vel_pub("raw_vel", &raw_vel_msg);
 
 void setup()
 {
+    strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
+  strip.show();            // Turn OFF all pixels ASAP
+  strip.setBrightness(brightness); // Set BRIGHTNESS to about 1/5 (max = 255)
+ c = 170;
     steering_servo.attach(STEERING_PIN);
     steering_servo.write(90);
 
@@ -142,10 +161,25 @@ void loop()
         }
     }
     //call all the callbacks waiting to be called
-    nh.spinOnce();
+    if((millis() - neo_timer) >= BREATHING_DELAY){
+        if (brightness_sign == true)
+            brightness++;
+        else
+            brightness--;
+        if (brightness >= MAX_BRIGHTNESS && brightness_sign == true)
+            brightness_sign = false;
+        else if (brightness <= MIN_BRIGHTNESS && brightness_sign == false)
+            brightness_sign = true;
+        strip.setBrightness(brightness);
+        colorWipe(Wheel(c & 255));
+        neo_timer = millis();
+    }
+
+  nh.spinOnce();
 }
 
 void PIDCallback(const lino_msgs::PID& pid)
+
 {
     //callback function every time PID constants are received from lino_pid for tuning
     //this callback receives pid object where P,I, and D constants are stored
@@ -162,7 +196,14 @@ void commandCallback(const geometry_msgs::Twist& cmd_msg)
     g_req_linear_vel_x = cmd_msg.linear.x;
     g_req_linear_vel_y = cmd_msg.linear.y;
     g_req_angular_vel_z = -cmd_msg.angular.z;
-
+  float cmd_vx = g_req_linear_vel_x; // m/s
+  float cmd_vz = g_req_angular_vel_z; // rad/s
+  right_speed_ms = abs((cmd_vz * WHEEL_DISTANCE) / 2 + cmd_vx);
+  left_speed_ms = abs((cmd_vx * 2) - right_speed_ms);
+  float total_ms = right_speed_ms + left_speed_ms;
+  if (total_ms > MAX_SPEED)
+    total_ms = MAX_SPEED;
+  c = (total_ms / MAX_SPEED ) * (MAX_INT - MIN_INT) + MIN_INT;
     g_prev_command_time = millis();
 }
 
@@ -202,9 +243,9 @@ void moveBase()
 
     char buffer[50];
 
-    sprintf (buffer, "L SPEED: sent %ld, target %ld, feedback %ld", motor_1_spin, req_rpm.motor1, current_rpm1);
+    sprintf (buffer, "L SPEED: %ld", motor_1_spin);
     nh.loginfo(buffer);
-    sprintf (buffer, "R SPEED: sent %ld, target %ld, feedback %ld", motor_2_spin, req_rpm.motor2, current_rpm2);
+    sprintf (buffer, "R SPEED: %ld", motor_2_spin);
     nh.loginfo(buffer);
 
     motor1_controller.spin(motor_1_spin);
@@ -289,4 +330,23 @@ void printDebug()
 //    nh.loginfo(buffer);
 //    sprintf (buffer, "Encoder RearRight  : %ld", motor4_encoder.read());
 //    nh.loginfo(buffer);
+}
+uint32_t Wheel(byte WheelPos) {
+  WheelPos = 255 - WheelPos;
+  if (WheelPos < 85) {
+    return strip.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+  }
+  if (WheelPos < 170) {
+    WheelPos -= 85;
+    return strip.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+  }
+  WheelPos -= 170;
+  return strip.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
+}
+
+void colorWipe(uint32_t c) {
+  for (uint16_t i = 0; i < strip.numPixels();i++) {
+    strip.setPixelColor(i, c);
+  }
+  strip.show();
 }
