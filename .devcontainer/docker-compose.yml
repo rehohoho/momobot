@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  momobot:
+    image: momobot
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ../:/usr/src/momobot
+    tty: true
