@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Circuit Diagram Draw.io Links" href="cd_links.html" /><link rel="prev" title="Software" href="../com/software.html" />
 
-    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Flipsky VESC 4.12 Documentation - momobot 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -20,24 +20,28 @@
   --color-code-foreground: black;
   
   }
-  body[data-theme="dark"] {
-    --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-  }
-  @media (prefers-color-scheme: dark) {
-    body:not([data-theme="light"]) {
+  @media not print {
+    body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
   
     }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -139,7 +143,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../_static/MOMO_logo_full.png" alt="Logo"/>
@@ -148,7 +152,7 @@
   <span class="sidebar-brand-text">momobot 1.1.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -180,7 +184,15 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -195,18 +207,18 @@
         </div>
         <article role="main">
           <section id="flipsky-vesc-4-12-documentation">
-<span id="vesc-doc-main"></span><h1>Flipsky VESC 4.12 Documentation<a class="headerlink" href="#flipsky-vesc-4-12-documentation" title="Permalink to this headline">#</a></h1>
+<span id="vesc-doc-main"></span><h1>Flipsky VESC 4.12 Documentation<a class="headerlink" href="#flipsky-vesc-4-12-documentation" title="Permalink to this heading">#</a></h1>
 <p>[<a class="reference external" href="https://github.com/Fasermaler/Misc-Notes/blob/master/Flipsky%20VESC%204.12%20Documentation.md">Credits</a>]</p>
 <p>This is a documentation for how to use and configure the flipSky FSESC 4.12 used
 on the MOMObot. The exact store page can be found in this
 <a class="reference external" href="https://flipsky.net/products/torque-esc-vesc-%C2%AE-bldc-electronic-speed-controller">link</a>.</p>
 <section id="contribution-guidelines">
-<h2>Contribution Guidelines<a class="headerlink" href="#contribution-guidelines" title="Permalink to this headline">#</a></h2>
+<h2>Contribution Guidelines<a class="headerlink" href="#contribution-guidelines" title="Permalink to this heading">#</a></h2>
 <p>If you update this guide, kindly send a pull request to the original repo
 listed in the credits!</p>
 </section>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
 <p>Vedder Electronic Speed Controller (VESC) is a highly configurable (largely)
 open source ESC that sees a wide variety of applications by hobbyists in the
 electric scooter or skateboard domain. This makes VESC a suitable ESC for
@@ -224,14 +236,14 @@ calibrated properly</p></li>
 </ul>
 </section>
 <section id="flipsky-vesc-4-12">
-<h2>Flipsky VESC 4.12<a class="headerlink" href="#flipsky-vesc-4-12" title="Permalink to this headline">#</a></h2>
+<h2>Flipsky VESC 4.12<a class="headerlink" href="#flipsky-vesc-4-12" title="Permalink to this heading">#</a></h2>
 <p>The Flipsky VESC 4.12 is a surprisingly robust product that does not require a laboratory power supply for first start configuration (contrary to some VESC guides on the internet). Despite being made in China, it offers reliable performance that matches some of the more expensive ESCs on the market. It is also one of the few remaining VESC providers that has remained backward compatible with the open source VESC software (many providers have converted the VESC stack to a more proprietary one).</p>
 <section id="firmware">
-<h3>Firmware<a class="headerlink" href="#firmware" title="Permalink to this headline">#</a></h3>
+<h3>Firmware<a class="headerlink" href="#firmware" title="Permalink to this heading">#</a></h3>
 <p>Flipsky VESC 4.12 has a hardware version of 4.12 and a software version of 3.4. This means only specific version of VESC tools can be used with the ESC. Because of the finicky nature of download links on the internet (as well as some requiring registration), I have uploaded the specific VESC tool (windows) proven to work with the Flipsky VESC 4.12 <a class="reference external" href="https://drive.google.com/file/d/1Co-ZkWsYtM6cXchykglwBf2F281r1QB_/view?usp=sharing">here</a>. The exact version is VESC tool version 0.95.</p>
 </section>
 <section id="specifications">
-<h3>Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline">#</a></h3>
+<h3>Specifications<a class="headerlink" href="#specifications" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Hardware: v4.12</p></li>
 <li><p>Firmware: v3.40</p></li>
@@ -239,7 +251,7 @@ calibrated properly</p></li>
 <li><p>Current: 50A continuous / 240A peak</p></li>
 <li><p>Voltage: 8V-60V (cells: 3-13S LiPo)</p></li>
 <li><p>Recommended: 10S battery</p></li>
-<li><p>BEC: <a class="reference external" href="mailto:5V%401.5A">5V<span>@</span>1<span>.</span>5A</a></p></li>
+<li><p>BEC: <a class="reference external" href="mailto:5V&#37;&#52;&#48;1&#46;5A">5V<span>&#64;</span>1<span>&#46;</span>5A</a></p></li>
 <li><p>BEC type: Internal driver support</p></li>
 <li><p>Timing: Software Calibration</p></li>
 <li><p>Motor control interface: PPM signal (RC servo), analog, UART, I2C,    USB or CAN‐bus</p></li>
@@ -253,14 +265,14 @@ calibrated properly</p></li>
 </ul>
 </section>
 <section id="connections">
-<h3>Connections<a class="headerlink" href="#connections" title="Permalink to this headline">#</a></h3>
-<a class="reference internal image-reference" href="../_images/06_be544658-0682-45ea-8461-9ecee8e482f2_2048x2048.jpg"><img alt="Connections" src="../_images/06_be544658-0682-45ea-8461-9ecee8e482f2_2048x2048.jpg" style="width: 100%;"/></a>
+<h3>Connections<a class="headerlink" href="#connections" title="Permalink to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/06_be544658-0682-45ea-8461-9ecee8e482f2_2048x2048.jpg"><img alt="Connections" src="../_images/06_be544658-0682-45ea-8461-9ecee8e482f2_2048x2048.jpg" style="width: 100%;" /></a>
 </section>
 </section>
 <section id="software-setup">
-<h2>Software Setup<a class="headerlink" href="#software-setup" title="Permalink to this headline">#</a></h2>
+<h2>Software Setup<a class="headerlink" href="#software-setup" title="Permalink to this heading">#</a></h2>
 <section id="motor-connection-and-setup">
-<h3>Motor Connection and Setup<a class="headerlink" href="#motor-connection-and-setup" title="Permalink to this headline">#</a></h3>
+<h3>Motor Connection and Setup<a class="headerlink" href="#motor-connection-and-setup" title="Permalink to this heading">#</a></h3>
 <p>Some information was referenced from the <a class="reference external" href="https://cdn.shopify.com/s/files/1/0011/4039/1996/files/Motor_Setup_Wizard.pdf?11313553160569203029">Motor Wizard Guide</a>.</p>
 <ol class="arabic simple">
 <li><p>Start <code class="docutils literal notranslate"><span class="pre">vesc_tool_0.95.exe</span></code> in administrator mode</p>
@@ -270,7 +282,7 @@ calibrated properly</p></li>
 </li>
 <li><p>The tool should look like this:</p></li>
 </ol>
-<a class="reference internal image-reference" href="../_images/1555308556859.png"><img alt="../_images/1555308556859.png" src="../_images/1555308556859.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308556859.png"><img alt="../_images/1555308556859.png" src="../_images/1555308556859.png" style="width: 100%;" /></a>
 <ol class="arabic simple" start="3">
 <li><p>Plug in the one of the Flipsky VESCs to the computer via mini-USB cable.</p></li>
 <li><p>Click on the connection icon in the top right corner.</p>
@@ -279,20 +291,20 @@ calibrated properly</p></li>
 </ul>
 </li>
 </ol>
-<a class="reference internal image-reference" href="../_images/1555308548007.png"><img alt="../_images/1555308548007.png" src="../_images/1555308548007.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308548007.png"><img alt="../_images/1555308548007.png" src="../_images/1555308548007.png" style="width: 100%;" /></a>
 <ol class="arabic simple" start="5">
 <li><p>Alternatively, click on the <code class="docutils literal notranslate"><span class="pre">connection</span></code> tab in the left menu and select <code class="docutils literal notranslate"><span class="pre">Autoconnect</span></code>:</p></li>
 </ol>
-<a class="reference internal image-reference" href="../_images/1555308539968.png"><img alt="../_images/1555308539968.png" src="../_images/1555308539968.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308539968.png"><img alt="../_images/1555308539968.png" src="../_images/1555308539968.png" style="width: 100%;" /></a>
 <ol class="arabic simple" start="6">
 <li><p>The VESC should now have a lit green LED. If there isn’t a lit LED, check if the drive has been installed correctly or if the product is defective</p></li>
 <li><p>The motor setup wizard should appear, follow the steps accordingly</p></li>
 </ol>
-<a class="reference internal image-reference" href="../_images/1555308527000.png"><img alt="../_images/1555308527000.png" src="../_images/1555308527000.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308527000.png"><img alt="../_images/1555308527000.png" src="../_images/1555308527000.png" style="width: 100%;" /></a>
 <ol class="arabic simple" start="8">
 <li><p>In our case, we will be selecting Field Oriented Control (FOC):</p></li>
 </ol>
-<a class="reference internal image-reference" href="../_images/1555308503717.png"><img alt="../_images/1555308503717.png" src="../_images/1555308503717.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308503717.png"><img alt="../_images/1555308503717.png" src="../_images/1555308503717.png" style="width: 100%;" /></a>
 <ol class="arabic" start="9">
 <li><p>Under the motor setup wizard, enter the following parameters for the scooter motors used by the MOMObot:</p>
 <ul class="simple">
@@ -310,13 +322,13 @@ calibrated properly</p></li>
 <li><p>In the sensor mode, select <code class="docutils literal notranslate"><span class="pre">Hall</span> <span class="pre">Sensors</span></code>.</p></li>
 <li><p>Prop up the robot such that the wheels are not touching the ground (ensure that the wheels are attached to ensure the correct loading on the motors).</p></li>
 <li><p>Proceed to the FOC settings wizard.</p>
-<a class="reference internal image-reference" href="../_images/1555308490615.png"><img alt="../_images/1555308490615.png" src="../_images/1555308490615.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308490615.png"><img alt="../_images/1555308490615.png" src="../_images/1555308490615.png" style="width: 100%;" /></a>
 <ul class="simple">
 <li><p>Press the RL button, the motor will begin to vibrate</p></li>
 <li><p>Then press the lamba button, the motor will begin to spin</p></li>
 <li><p>After all red boxes turn green (indicating that VESC has detected the motor parameters), click on <code class="docutils literal notranslate"><span class="pre">apply</span></code> to apply the motor values.</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/1555308481700.png"><img alt="../_images/1555308481700.png" src="../_images/1555308481700.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308481700.png"><img alt="../_images/1555308481700.png" src="../_images/1555308481700.png" style="width: 100%;" /></a>
 </li>
 <li><p>Under the Hall Sensor Detection wizard, ensure the motors can rotate freely.</p>
 <ul class="simple">
@@ -328,17 +340,17 @@ calibrated properly</p></li>
 </ol>
 </section>
 <section id="app-settings">
-<h3>App Settings<a class="headerlink" href="#app-settings" title="Permalink to this headline">#</a></h3>
+<h3>App Settings<a class="headerlink" href="#app-settings" title="Permalink to this heading">#</a></h3>
 <p>Next the app settings has to be configured accordingly. For MOMO control, we will be using PPM directly from the Teensy. Information for configuring VESC for RC can be found at the [RC configuration guide](&lt;<a class="reference external" href="https://cdn.shopify.com/s/files/1/0011/4039/1996/files/Input_Setup_Wizard_for_single_VESC_using_a_PPM_signal_radio_controller.pdf?11313553160569203029">https://cdn.shopify.com/s/files/1/0011/4039/1996/files/Input_Setup_Wizard_for_single_VESC_using_a_PPM_signal_radio_controller.pdf?11313553160569203029</a>&gt; ).</p>
 <ol class="arabic simple">
 <li><p>Navigate to the <cite>App Settings</cite> in the left menu and select <code class="docutils literal notranslate"><span class="pre">Input</span> <span class="pre">Setup</span> <span class="pre">Wizard</span></code> at the bottom.</p></li>
 <li><p>Configure the general app settings as follows:</p></li>
 </ol>
-<a class="reference internal image-reference" href="../_images/1555308468557.png"><img alt="../_images/1555308468557.png" src="../_images/1555308468557.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/1555308468557.png"><img alt="../_images/1555308468557.png" src="../_images/1555308468557.png" style="width: 100%;" /></a>
 <ol class="arabic simple" start="3">
 <li><p>Configure the PPM settings as follows:</p></li>
 </ol>
-<a class="reference internal image-reference" href="../_images/Capture.png"><img alt="../_images/Capture.png" src="../_images/Capture.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/Capture.png"><img alt="../_images/Capture.png" src="../_images/Capture.png" style="width: 100%;" /></a>
 <p>(Alternatively, using ROS / Teensy, send a neutral signal and monitor
 what PPM is being detected and use that as the center instead. Then
 apply the maximum forward and reverse and use those as the start and
@@ -346,7 +358,7 @@ end values accordingly.)</p>
 <ol class="arabic simple" start="4">
 <li><p>Finally, set the Duty Settings as follows:</p></li>
 </ol>
-<a class="reference internal image-reference" href="../_images/Capture2.png"><img alt="../_images/Capture2.png" src="../_images/Capture2.png" style="width: 100%;"/></a>
+<a class="reference internal image-reference" href="../_images/Capture2.png"><img alt="../_images/Capture2.png" src="../_images/Capture2.png" style="width: 100%;" /></a>
 <ol class="arabic simple" start="5">
 <li><p>Remember to write the configuration to the VESC.</p></li>
 </ol>
@@ -367,10 +379,10 @@ end values accordingly.)</p>
                 </div>
                 <div class="title">Circuit Diagram Draw.io Links</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="../com/software.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -384,7 +396,7 @@ end values accordingly.)</p>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2022 SUTD Organisation of Autonomous Robotics
+                Copyright &#169; 2023 SUTD Organisation of Autonomous Robotics
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -392,9 +404,7 @@ end values accordingly.)</p>
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -406,7 +416,7 @@ end values accordingly.)</p>
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -438,9 +448,8 @@ end values accordingly.)</p>
     </aside>
   </div>
 </div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/furo.js"></script>
     </body>
 </html>

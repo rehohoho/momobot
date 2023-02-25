@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Software" href="software.html" /><link rel="prev" title="Hardware" href="hardware.html" />
 
-    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Electronics - momobot 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -20,24 +20,28 @@
   --color-code-foreground: black;
   
   }
-  body[data-theme="dark"] {
-    --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-  }
-  @media (prefers-color-scheme: dark) {
-    body:not([data-theme="light"]) {
+  @media not print {
+    body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
   
     }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -139,7 +143,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../_static/MOMO_logo_full.png" alt="Logo"/>
@@ -148,7 +152,7 @@
   <span class="sidebar-brand-text">momobot 1.1.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -180,7 +184,15 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -195,13 +207,13 @@
         </div>
         <article role="main">
           <section id="electronics">
-<h1>Electronics<a class="headerlink" href="#electronics" title="Permalink to this headline">#</a></h1>
+<h1>Electronics<a class="headerlink" href="#electronics" title="Permalink to this heading">#</a></h1>
 <p>It powers the controlling system, including the lidar, VESC, Teensy, laptop , router as well as two solid state relays
 Two solid state relays were used.</p>
 <section id="electronic-bom">
-<h2>2.1 Electronic BOM<a class="headerlink" href="#electronic-bom" title="Permalink to this headline">#</a></h2>
+<h2>2.1 Electronic BOM<a class="headerlink" href="#electronic-bom" title="Permalink to this heading">#</a></h2>
 <section id="power-source">
-<h3>Power Source<a class="headerlink" href="#power-source" title="Permalink to this headline">#</a></h3>
+<h3>Power Source<a class="headerlink" href="#power-source" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>2x 12V 55Ah Pb acid batteries (Connected in Series)</p></li>
 <li><p>2x 12v 7Ah Pb acid batteries (Connected in Series)</p></li>
@@ -210,7 +222,7 @@ Two solid state relays were used.</p>
 </ul>
 </section>
 <section id="sensors">
-<h3>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">#</a></h3>
+<h3>Sensors<a class="headerlink" href="#sensors" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>1x LMS111 LiDAR</dt><dd><ul>
@@ -239,7 +251,7 @@ global pose data source)</p></li>
 </ul>
 </section>
 <section id="actuators-display-and-outputs">
-<h3>Actuators, Display and Outputs<a class="headerlink" href="#actuators-display-and-outputs" title="Permalink to this headline">#</a></h3>
+<h3>Actuators, Display and Outputs<a class="headerlink" href="#actuators-display-and-outputs" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><dl class="simple">
 <dt>1x Waveshare 13.3” HDMI LCD (H) with case</dt><dd><ul>
@@ -267,7 +279,7 @@ global pose data source)</p></li>
 </ul>
 </section>
 <section id="safety-and-power-control">
-<h3>Safety and Power Control<a class="headerlink" href="#safety-and-power-control" title="Permalink to this headline">#</a></h3>
+<h3>Safety and Power Control<a class="headerlink" href="#safety-and-power-control" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>1x Schnieder DC Circuit Breaker 125V 20A (2-way)</p></li>
 <li><p>1x Schnieder DC Circuit Breaker 125V 16A (1-way)</p></li>
@@ -322,7 +334,7 @@ global pose data source)</p></li>
 </ul>
 </section>
 <section id="connectors">
-<h3>Connectors<a class="headerlink" href="#connectors" title="Permalink to this headline">#</a></h3>
+<h3>Connectors<a class="headerlink" href="#connectors" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>8x XT90 Connectors (Male and Female)</p></li>
 <li><p>2x 6mm Barrel Jacks</p></li>
@@ -331,9 +343,9 @@ global pose data source)</p></li>
 </section>
 </section>
 <section id="start-up-shut-down-procedure">
-<h2>2.2 Start-Up, Shut-Down Procedure<a class="headerlink" href="#start-up-shut-down-procedure" title="Permalink to this headline">#</a></h2>
+<h2>2.2 Start-Up, Shut-Down Procedure<a class="headerlink" href="#start-up-shut-down-procedure" title="Permalink to this heading">#</a></h2>
 <section id="start-up-full">
-<h3>Start-Up (FULL)<a class="headerlink" href="#start-up-full" title="Permalink to this headline">#</a></h3>
+<h3>Start-Up (FULL)<a class="headerlink" href="#start-up-full" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Check the battery leads and ensure that the batteries are connected in series</p></li>
 <li><p>Electronics breakers to be Switched to “ON”</p></li>
@@ -343,7 +355,7 @@ global pose data source)</p></li>
 </ol>
 </section>
 <section id="shut-down-full">
-<h3>Shut-down (FULL)<a class="headerlink" href="#shut-down-full" title="Permalink to this headline">#</a></h3>
+<h3>Shut-down (FULL)<a class="headerlink" href="#shut-down-full" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Set the E-stop to “ON”</p></li>
 <li><p>Switch the Motor breakers to “OFF”</p></li>
@@ -353,13 +365,13 @@ global pose data source)</p></li>
 </ol>
 </section>
 <section id="start-up-truncated">
-<h3>Start-Up (truncated)<a class="headerlink" href="#start-up-truncated" title="Permalink to this headline">#</a></h3>
+<h3>Start-Up (truncated)<a class="headerlink" href="#start-up-truncated" title="Permalink to this heading">#</a></h3>
 <p>This assumes the batteries have been connected beforehand
 1. Electronics switch to be set to “ON”
 2. E-stop set to “OFF”</p>
 </section>
 <section id="shut-down-truncated">
-<h3>Shut-down (truncated)<a class="headerlink" href="#shut-down-truncated" title="Permalink to this headline">#</a></h3>
+<h3>Shut-down (truncated)<a class="headerlink" href="#shut-down-truncated" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>E-stop set to “ON”</p></li>
 <li><p>Electronics switch to be set to “OFF”</p></li>
@@ -368,7 +380,7 @@ global pose data source)</p></li>
 </section>
 </section>
 <section id="gotchas-hacky-stuff-and-things-to-take-note-of">
-<h2>2.3 Gotchas, Hacky Stuff and Things to Take Note Of<a class="headerlink" href="#gotchas-hacky-stuff-and-things-to-take-note-of" title="Permalink to this headline">#</a></h2>
+<h2>2.3 Gotchas, Hacky Stuff and Things to Take Note Of<a class="headerlink" href="#gotchas-hacky-stuff-and-things-to-take-note-of" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>2x16AWG wires used to take high current out of battery, as we did not have thick enough wires at the time. The wire usage was not consistent, as some were salvaged PVC wires from the previous bot. Suggested to use all silicone coated wires with low gauge for higher termperature endurance and lower resistance.</p></li>
 <li><p>Encoder and PWM input wires from Teensy to the VESC was connected using jumper cables rather than specific JST-PH connectors. Encoder wires were spliced to 2, one to VESC, one to teensy, causing a mess of wires and potential intermittent connections.</p></li>
@@ -379,32 +391,32 @@ global pose data source)</p></li>
 </ul>
 </section>
 <section id="circuit-diagrams">
-<h2>2.4 Circuit Diagrams<a class="headerlink" href="#circuit-diagrams" title="Permalink to this headline">#</a></h2>
+<h2>2.4 Circuit Diagrams<a class="headerlink" href="#circuit-diagrams" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The robot consists of two power systems</p></li>
 <li><p>24V with smaller battery capacity and 24V with bigger battery capacity</p></li>
 <li><p>Both 2 cells in series to boost the voltage for the motors, as well as the lidar</p></li>
 </ul>
 <section id="power">
-<h3>Power<a class="headerlink" href="#power" title="Permalink to this headline">#</a></h3>
-<img alt="teensy_connections" src="../_images/MOMObot_Power_Diagram.png"/>
-<img alt="power_sch" src="../_images/PowerSchematicDiagram.png"/>
-<img alt="Battery" src="../_images/momo_batt.png"/>
+<h3>Power<a class="headerlink" href="#power" title="Permalink to this heading">#</a></h3>
+<img alt="teensy_connections" src="../_images/MOMObot_Power_Diagram.png" />
+<img alt="power_sch" src="../_images/PowerSchematicDiagram.png" />
+<img alt="Battery" src="../_images/momo_batt.png" />
 </section>
 <section id="electronics-schematic">
-<h3>Electronics Schematic<a class="headerlink" href="#electronics-schematic" title="Permalink to this headline">#</a></h3>
-<a class="reference internal image-reference" href="../_images/momo_elec_teensy.png"><img alt="teensy_connections" src="../_images/momo_elec_teensy.png" style="width: 100%;"/></a>
+<h3>Electronics Schematic<a class="headerlink" href="#electronics-schematic" title="Permalink to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../_images/momo_elec_teensy.png"><img alt="teensy_connections" src="../_images/momo_elec_teensy.png" style="width: 100%;" /></a>
 </section>
 </section>
 <section id="motor-tuning">
-<h2>2.5 Motor Tuning<a class="headerlink" href="#motor-tuning" title="Permalink to this headline">#</a></h2>
+<h2>2.5 Motor Tuning<a class="headerlink" href="#motor-tuning" title="Permalink to this heading">#</a></h2>
 <section id="vesc-tuning">
-<h3>VESC tuning<a class="headerlink" href="#vesc-tuning" title="Permalink to this headline">#</a></h3>
+<h3>VESC tuning<a class="headerlink" href="#vesc-tuning" title="Permalink to this heading">#</a></h3>
 <p>Follow link for VESC tuning documentation
 - <a class="reference internal" href="../bonus/vesc_doc.html#vesc-doc-main"><span class="std std-ref">Flipsky VESC 4.12 Documentation</span></a></p>
 </section>
 <section id="foc-signal">
-<h3>FOC signal<a class="headerlink" href="#foc-signal" title="Permalink to this headline">#</a></h3>
+<h3>FOC signal<a class="headerlink" href="#foc-signal" title="Permalink to this heading">#</a></h3>
 <p>VESC also has internal PID control which is not modified in the original
 MOMObot because the PPM signals sent to the motors have been PID-ed in the
 ROS stack.</p>
@@ -425,11 +437,11 @@ in PPM will command motor response.</p></li>
 After tuning the VESC’s PPM and Duty Cycle settings, remember to write the settings else they will not be saved.</p>
 </section>
 <section id="momo-charges-alot">
-<h3>Momo charges alot<a class="headerlink" href="#momo-charges-alot" title="Permalink to this headline">#</a></h3>
+<h3>Momo charges alot<a class="headerlink" href="#momo-charges-alot" title="Permalink to this heading">#</a></h3>
 <p>Possible due to the I component of PID increasing when attempting to Pivot, then when transitioning to a forward movement, the built up I causes a surge in motor response.</p>
 </section>
 <section id="room-for-improvement">
-<h3>Room for improvement<a class="headerlink" href="#room-for-improvement" title="Permalink to this headline">#</a></h3>
+<h3>Room for improvement<a class="headerlink" href="#room-for-improvement" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>FOC profile can be improved (FOC settings , will have lots of variables to tune to fit the curve better)</p></li>
 <li><p>Positive, negative ramping time</p></li>
@@ -437,7 +449,7 @@ After tuning the VESC’s PPM and Duty Cycle settings, remember to write the set
 </section>
 </section>
 <section id="pid-tuning-from-the-momobot-side">
-<h2>2.6 PID Tuning from the MOMObot side<a class="headerlink" href="#pid-tuning-from-the-momobot-side" title="Permalink to this headline">#</a></h2>
+<h2>2.6 PID Tuning from the MOMObot side<a class="headerlink" href="#pid-tuning-from-the-momobot-side" title="Permalink to this heading">#</a></h2>
 <p><strong>Edit the config file</strong></p>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">roscd</span> <span class="pre">momobot/teensy/firmware/lib/config/</span></code></p></li>
@@ -468,10 +480,10 @@ After tuning the VESC’s PPM and Duty Cycle settings, remember to write the set
                 </div>
                 <div class="title">Software</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="hardware.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -485,7 +497,7 @@ After tuning the VESC’s PPM and Duty Cycle settings, remember to write the set
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2022 SUTD Organisation of Autonomous Robotics
+                Copyright &#169; 2023 SUTD Organisation of Autonomous Robotics
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -493,9 +505,7 @@ After tuning the VESC’s PPM and Duty Cycle settings, remember to write the set
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -507,7 +517,7 @@ After tuning the VESC’s PPM and Duty Cycle settings, remember to write the set
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -555,9 +565,8 @@ After tuning the VESC’s PPM and Duty Cycle settings, remember to write the set
     </aside>
   </div>
 </div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/furo.js"></script>
     </body>
 </html>

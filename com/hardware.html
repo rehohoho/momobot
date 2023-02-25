@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Electronics" href="electronics.html" /><link rel="prev" title="MOMObot Documentation" href="../index.html" />
 
-    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+    <!-- Generated with Sphinx 6.1.3 and Furo 2022.12.07 -->
         <title>Hardware - momobot 1.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -20,24 +20,28 @@
   --color-code-foreground: black;
   
   }
-  body[data-theme="dark"] {
-    --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-  }
-  @media (prefers-color-scheme: dark) {
-    body:not([data-theme="light"]) {
+  @media not print {
+    body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
   
     }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
@@ -139,7 +143,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="../index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="../_static/MOMO_logo_full.png" alt="Logo"/>
@@ -148,7 +152,7 @@
   <span class="sidebar-brand-text">momobot 1.1.0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
@@ -180,7 +184,15 @@
   <div class="main">
     <div class="content">
       <div class="article-container">
-        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -195,9 +207,9 @@
         </div>
         <article role="main">
           <section id="hardware">
-<h1>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">#</a></h1>
+<h1>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading">#</a></h1>
 <section id="dimensions">
-<h2>1.1 Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this headline">#</a></h2>
+<h2>1.1 Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>52x52x80 cm (just frame)</p></li>
 <li><p>52x52x84 cm (including wheels)</p></li>
@@ -206,14 +218,14 @@
 <p>The ratio of 52 cm : 80 cm of the frame is to improve the aesthetics of the MOMO, by observing the golden ratio.</p>
 </section>
 <section id="specifications">
-<h2>1.2 Specifications<a class="headerlink" href="#specifications" title="Permalink to this headline">#</a></h2>
+<h2>1.2 Specifications<a class="headerlink" href="#specifications" title="Permalink to this heading">#</a></h2>
 <p>Side panels are tapered on one end to allow for a 270 degree field-of-view to ensure unobstructed LIDAR operation. Components on the bottom are shifted to the rear in addition to tapered side panels to allow for unobstructed view for the LIDAR.</p>
 <p>MOMO uses rear wheel drive to ensure maximum stability when driving forward. Front wheel drive systems are inherently unstable due to fluttering of the castor wheel - undesirable oscillations during autonomous navigation (this was shown empirically as the original design was a front wheel drive).</p>
 <p>This allows for the robot to deal with any sudden loss of front traction as well as traverse ramps.</p>
 <p><strong>Design Payload Weight:</strong> 20 kg
 In actuality, MOMO can take the weight of 1 person (60+ kg) when both motors are moving. (However, it would be unable to perform pivot turns.)</p>
 <section id="some-quirks-in-selection-and-design">
-<h3>Some quirks in selection and design<a class="headerlink" href="#some-quirks-in-selection-and-design" title="Permalink to this headline">#</a></h3>
+<h3>Some quirks in selection and design<a class="headerlink" href="#some-quirks-in-selection-and-design" title="Permalink to this heading">#</a></h3>
 <p>2040 Extrusions are utilised to allow for greater loading of frame by increasing the amount of material vertically. This increases the maximum strain which the frame can withstand.</p>
 <p>4 corner pillars of MOMO comprise of L-shaped 4040s to prevent horizontal warping of the frame.</p>
 <p>Reason for more extrusions in front:
@@ -248,7 +260,7 @@ Rear wheel drive - all weight on rear wheel, when accelerate does wheelie, so we
 </section>
 </section>
 <section id="gotchas-hacky-stuff-and-things-to-take-note-of">
-<h2>1.3 Gotchas, Hacky Stuff and Things to Take Note Of<a class="headerlink" href="#gotchas-hacky-stuff-and-things-to-take-note-of" title="Permalink to this headline">#</a></h2>
+<h2>1.3 Gotchas, Hacky Stuff and Things to Take Note Of<a class="headerlink" href="#gotchas-hacky-stuff-and-things-to-take-note-of" title="Permalink to this heading">#</a></h2>
 <p>Take note:
 - Screws to motor -able to come out with vibrations:</p>
 <blockquote>
@@ -274,7 +286,7 @@ Rear wheel drive - all weight on rear wheel, when accelerate does wheelie, so we
 </ul>
 </section>
 <section id="to-dos">
-<h2>1.4 To Dos<a class="headerlink" href="#to-dos" title="Permalink to this headline">#</a></h2>
+<h2>1.4 To Dos<a class="headerlink" href="#to-dos" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p>Redo Lidar Mount - side holder tolerance w</p></li>
 <li><p>Implement a guard for the front LiDAR</p></li>
@@ -297,10 +309,10 @@ Rear wheel drive - all weight on rear wheel, when accelerate does wheelie, so we
                 </div>
                 <div class="title">Electronics</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="../index.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -314,7 +326,7 @@ Rear wheel drive - all weight on rear wheel, when accelerate does wheelie, so we
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2022 SUTD Organisation of Autonomous Robotics
+                Copyright &#169; 2023 SUTD Organisation of Autonomous Robotics
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -322,9 +334,7 @@ Rear wheel drive - all weight on rear wheel, when accelerate does wheelie, so we
             
           </div>
           <div class="right-details">
-            <div class="icons">
-              
-            </div>
+            
           </div>
         </div>
         
@@ -336,7 +346,7 @@ Rear wheel drive - all weight on rear wheel, when accelerate does wheelie, so we
       <div class="toc-sticky toc-scroll">
         <div class="toc-title-container">
           <span class="toc-title">
-            Contents
+            On this page
           </span>
         </div>
         <div class="toc-tree-container">
@@ -362,9 +372,8 @@ Rear wheel drive - all weight on rear wheel, when accelerate does wheelie, so we
     </aside>
   </div>
 </div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/scripts/furo.js"></script>
     </body>
 </html>
